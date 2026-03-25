@@ -277,8 +277,15 @@ local function initGroupObject(data)
     end
 
     public.disband = function()
+        if private.partyUuid then
+            local party = GetParty(private.partyUuid)
+            if party and party.destroy then
+                party.destroy()
+            end
+        end
+
         for _, memberData in pairs(private.members) do
-            memberToGroupMap[memberData.identifier] = nil
+            memberToGroupMap[tostring(memberData.identifier)] = nil
         end
 
         TriggerEvent("prp-bridge:server:groupDisbanded", private.uuid)
