@@ -47,6 +47,7 @@ server_scripts {
 }
 
 escrow_ignore {
+    "*.lua",
     "*/**.lua",
 }
 
