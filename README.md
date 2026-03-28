@@ -32,7 +32,7 @@ BridgeConfig = {
     Target      = "ox_target",       -- ox_target | qb-target | sleepless_interact
     Medical     = "qbx_medical",     -- qbx_medical | esx_ambulancejob | nd_ambulance
     Dispatch    = "ps-dispatch",     -- ps-dispatch | origen_police | cd_dispatch | rcore_dispatch
-    VehicleKeys = "qbx_vehiclekeys", -- qbx_vehiclekeys | cd_garage | mVehicle | okokGarage | wasabi_carlock | ...
+    VehicleKeys = "qbx_vehiclekeys", -- qbx_vehiclekeys | cd_garage | mVehicle | okokGarage | wasabi_carlock | mrnewbvehiclekeys | ...
     VehicleFuel = "ox_fuel",         -- ox_fuel | LegacyFuel | cdn-fuel | lc_fuel | qb-fuel
     Minigames   = "prp-minigames",
 

@@ -90,6 +90,7 @@ BridgeConfig.Dispatch = "ps-dispatch"
         - vehicles_keys
         - wasabi_carlock
         - nd_core
+        - mrnewbvehiclekeys
 ]]
 ---@type AvailableVehicleKeys
 BridgeConfig.VehicleKeys = "qbx_vehiclekeys"
