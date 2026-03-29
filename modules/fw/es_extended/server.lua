@@ -334,7 +334,7 @@ function fw.getOwnedVehicleByPlate(plate, returnEmpty)
         return
     end
 
-    return BridgeConfig.VehicleData[vehicle.vehicle.model]
+    return lib.table.deepclone(BridgeConfig.VehicleData[vehicle.vehicle.model])
 end
 
 ---@param identifier string | number
@@ -367,7 +367,7 @@ function fw.getAllOwnedVehicles(identifier, classes)
             vehicle.properties.model = joaat(vehicle.properties.model)
         end
 
-        local vehData = BridgeConfig.VehicleData[vehicle.properties.model]
+        local vehData = lib.table.deepclone(BridgeConfig.VehicleData[vehicle.properties.model])
         if not classes or vehData and vehData.class and (type(classes) == "table" and lib.table.contains(classes, vehData.class) or vehData.class == classes) then
             filtered[#filtered + 1] = vehData
         end

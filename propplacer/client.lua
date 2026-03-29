@@ -128,9 +128,14 @@ local function propPlacer(model, forceGround, allowedMaterials, maxDistance)
     while isPlacingProp do
         hitEntity, entityHit, endCoords, _, materialHash = lib.raycast.fromCamera(1 | 8 | 16, placingEntity)
         if hitEntity and hitEntity > 0 and entityHit ~= cache.ped and not allowedMaterials or allowedMaterials?[materialHash] then
-            SetEntityCoordsNoOffset(placingEntity, endCoords.x, endCoords.y, endCoords.z, false, false, false)
+            SetEntityCoords(placingEntity, endCoords.x, endCoords.y, endCoords.z, false, false, false, false)
+            
             if forceGround then
+                -- preserve original heading as force on ground updates entire rotation
+                local heading = GetEntityHeading(placingEntity)
+                Wait(0)
                 PlaceObjectOnGroundProperly(placingEntity)
+                SetEntityHeading(placingEntity, heading)
             end
         end
 

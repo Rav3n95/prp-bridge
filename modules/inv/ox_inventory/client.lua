@@ -13,6 +13,7 @@ end
 ---@return number | nil
 function inv.findItemSlot(itemName, minDurabilityAmount)
     local items = exports.ox_inventory:Search('slots', itemName)
+    if not items or type(items) ~= "table" then return nil end
     for i=1, #items do
         local item = items[i]
         if item.name == itemName then

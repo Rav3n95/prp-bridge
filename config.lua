@@ -95,7 +95,7 @@ BridgeConfig.Dispatch = "ps-dispatch"
         - Renewed-Vehiclekeys
 ]]
 ---@type AvailableVehicleKeys
-BridgeConfig.VehicleKeys = "Renewed-Vehiclekeys"
+BridgeConfig.VehicleKeys = "qbx_vehiclekeys"
 
 --[[
     AvailableVehicleFuel Resources:
